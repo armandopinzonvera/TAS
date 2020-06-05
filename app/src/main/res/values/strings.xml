@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">TAS</string>
+
+    ///// MAIN /////
+
+    <string name="iniciar">INICIAR</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="consultar">CONSULTAR -DESCARGAR</string>
+    <string name="volver">VOLVER</string>
+
+    ///// INICIAR //////
+
+    <string name="informacion"> INFORMACION DEL PROYECTO</string>
+    <string name="nombre_muestreo">NOMBRE DEL MUESTREO</string>
+    <string name="id_transecto">ID del transecto</string>
+    <string name="grupo_animal">Grupo de organismos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
