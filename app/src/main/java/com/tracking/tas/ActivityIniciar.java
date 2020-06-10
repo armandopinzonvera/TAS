@@ -48,6 +48,12 @@ public class ActivityIniciar extends AppCompatActivity {
         nombre_muestreo.setText("");
         id_transecto.setText("");
         grupo_organismos.setText("");
+
+
+        Intent intent2 = new Intent(this, ActivityMapa.class);
+        Intent intent3 = new Intent(this, Ubicaxion.class);
+        startActivity(intent2);
+        startActivity(intent3);
     }
 
 }

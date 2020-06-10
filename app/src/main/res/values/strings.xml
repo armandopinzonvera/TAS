@@ -15,8 +15,21 @@
     <string name="id_transecto">ID del transecto</string>
     <string name="grupo_animal">Grupo de organismos</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    ///// MAPA ////////////
 
+    <string name="lat">lat:</string>
+    <string name="lon">lon:</string>
+    <string name="alt">alt:</string>
+    <string name="dis">dis:</string>
+    <string name="tim">tim:</string>
+    <string name="vel">vel:</string>
+    <string name="muestreo">muestreo</string>
+    <string name="transecto">transecto</string>
+    <string name="s">S:</string>
+    <string name="d">D:</string>
+    <string name="agregar">Agregar</string>
+    <string name="terminar">Terminar</string>
+    <string name="taxon">Taxon</string>
+    <string name="cantidad">1</string>
 
 </resources>
