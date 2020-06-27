@@ -39,8 +39,7 @@
                 android:id="@+id/tv_latitud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0.00000" />
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -53,8 +52,7 @@
                 android:id="@+id/tv_longitud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0.00000" />
+                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -217,14 +215,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="independentSent"
             android:text="@string/agregar" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="153dp"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_red_light"
+            android:background="@android:color/holo_blue_dark"
             android:text="@string/terminar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

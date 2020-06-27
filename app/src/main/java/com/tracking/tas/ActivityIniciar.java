@@ -49,11 +49,12 @@ public class ActivityIniciar extends AppCompatActivity {
         id_transecto.setText("");
         grupo_organismos.setText("");
 
-
         Intent intent2 = new Intent(this, ActivityMapa.class);
-        Intent intent3 = new Intent(this, Ubicaxion.class);
+        Toast.makeText(this, "RECUERDA PRENDER GPS", Toast.LENGTH_LONG).show();
         startActivity(intent2);
-        startActivity(intent3);
+
+
+
     }
 
 }

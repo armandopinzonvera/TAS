@@ -34,6 +34,7 @@
                 android:id="@+id/bt1_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/ic_launcher_background"
                 android:onClick="irIniciar"
                 android:text="@string/iniciar"
                 android:textSize="18sp" />
@@ -42,6 +43,7 @@
                 android:id="@+id/bt2_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_light"
                 android:onClick="onClick"
                 android:text="@string/continuar"
                 android:textSize="18sp" />
@@ -50,6 +52,7 @@
                 android:id="@+id/bt3_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
                 android:onClick="onClick"
                 android:text="@string/consultar"
                 android:textSize="18sp" />

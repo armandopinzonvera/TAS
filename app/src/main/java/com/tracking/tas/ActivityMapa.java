@@ -10,14 +10,19 @@ package com.tracking.tas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.tracking.tas.Fragments.FragMapa;
 
-public class ActivityMapa extends AppCompatActivity {
+public class ActivityMapa extends AppCompatActivity implements Interface.View{
 
-    float latitud, longitud;
+    private  Interface.Presenter presenter;
+    private Interface.Model modelo;
+
+
     FragMapa fragMapa = new FragMapa();
     TextView tv_latitud, tv_longitud, tv_altura, tv_distancia,
             tv_tiempo, tv_velocidad, tv_idMuestreo, tv_idTransecto,
@@ -26,7 +31,8 @@ public class ActivityMapa extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
@@ -45,9 +51,29 @@ public class ActivityMapa extends AppCompatActivity {
         et_taxon = (EditText) findViewById(R.id.et_taxon);
         et_cantidad = (EditText)findViewById(R.id.et_cantidad);
 
+        presenter = new Presenter(this);
 
-
-        }
-
+        Log.v("valor_am calculus: "+latitudV, "results: "+((Object)latitudV).getClass().getSimpleName());
 
     }
+    float latitudV, longitudV;
+    @Override
+    public void setValuesMapUi(float longitudeP, float latitudeP) {
+        this.latitudV = latitudeP;
+        this.longitudV = longitudeP;
+        tv_latitud.setText(String.valueOf(latitudV));
+        tv_longitud.setText(String.valueOf(longitudV));
+    }
+
+//////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    public void xxShowResult(String result) {
+
+        tv_riqueza.setText(result);
+    }
+
+    public void independentSent(View view){
+        presenter.xxcalculus(et_cantidad.getText().toString());
+    }
+}
+

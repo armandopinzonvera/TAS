@@ -62,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_orange_dark"
             android:onClick="onClickIniciar"
             android:text="@string/iniciar" />
 
@@ -69,6 +70,7 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
             android:onClick="volver"
             android:text="@string/volver" />
     </LinearLayout>
