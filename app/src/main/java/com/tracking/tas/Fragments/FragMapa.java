@@ -7,13 +7,16 @@ package com.tracking.tas.Fragments;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
@@ -41,12 +44,15 @@ import org.json.JSONObject;
 
 import java.util.concurrent.Executor;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 public class FragMapa extends Fragment implements OnMapReadyCallback, Interface.Model {
 
 
     public String lat1, lon1;
     private GoogleMap mMap;
     private double result;
+   // LocationManager locationManager;
 
 
     public static final int DEFAULT_UPDATE_INTERVAL = 30;
@@ -82,7 +88,14 @@ public class FragMapa extends Fragment implements OnMapReadyCallback, Interface.
         locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
         updateGPS();
         locationRequest = new LocationRequest();
+
     }
+
+
+
+
+
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -116,7 +129,7 @@ public class FragMapa extends Fragment implements OnMapReadyCallback, Interface.
     /////////////////////////////////////////////////////////////////////////////////////////////////
     private void updateUIValues(Location location) {
         latitudOrigen = (float) location.getLatitude();
-       longitudOrigen = (float) location.getLongitude();
+        longitudOrigen = (float) location.getLongitude();
     }
 
 

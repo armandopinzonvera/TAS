@@ -19,4 +19,5 @@ public interface Interface {
 
        // void putData();
     }
+
 }
